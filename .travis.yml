@@ -4,4 +4,4 @@ android:
   - build-tools-19.1.0
   - android-14
 before_script:
-  - "cd android"
+  - cd android
