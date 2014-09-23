@@ -3,7 +3,7 @@ android:
   components:
   - build-tools-20.0.0
   - android-14
-  - sys-img-armeabi-v7a-android-15
+  - sys-img-armeabi-v7a-android-14
 before_script:
   - cd android
   - ls -l
