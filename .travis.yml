@@ -2,7 +2,7 @@ language: android
 jdk: oraclejdk7
 env:
   matrix:
-    - ANDROID_TARGET=android-19  ANDROID_ABI=armeabi-v7a
+    - ANDROID_TARGET=android-14  ANDROID_ABI=armeabi-v7a
 
 android:
   components:
@@ -12,9 +12,11 @@ android:
 before_script:
   - cd android
   - ls -l
+  - chmod +x ./gradlew
 
-  - echo no | android create avd --force -n test -t android-14 --abi armeabi-v7a
+  - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
   - emulator -avd test -no-skin -no-audio -no-window &
-  - android-wait-for-emulator
+  - adb wait-for-device
   - adb shell input keyevent 82 &
+
 script: ./gradlew connectedAndroidTest
