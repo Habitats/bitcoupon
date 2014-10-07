@@ -59,7 +59,6 @@ public class BitCouponTest extends TestCase {
 
         TransactionHistory transactionHistory = new TransactionHistory(transactions);
 
-        // Had to try a little to find values it liked
         final Transaction sendTransaction = BitCoupon.generateSendTransaction(
                 PRIVATE_KEY,
                 CREATOR_ADDRESS,
