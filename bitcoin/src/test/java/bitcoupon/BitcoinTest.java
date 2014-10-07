@@ -1,3 +1,5 @@
+package bitcoupon;
+
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -12,7 +14,7 @@ import bitcoupon.transaction.TransactionHistory;
 /**
  * Created by Patrick on 01.10.2014.
  */
-public class BitcoinTests {
+public class BitcoinTest {
 
   @Test
   public void test_TransactionJsonConvertion() {
